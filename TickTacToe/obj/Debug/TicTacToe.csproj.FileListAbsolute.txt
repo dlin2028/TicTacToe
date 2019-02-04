@@ -18,3 +18,16 @@ C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.
 C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TickTacToe.exe
 C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TickTacToe.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\TickTacToe.exe.config
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\TickTacToe.exe
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\TickTacToe.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csprojAssemblyReference.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TicTacToe.Form1.resources
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TickTacToe.Properties.Resources.resources
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TickTacToe.exe
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TickTacToe.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.CopyComplete

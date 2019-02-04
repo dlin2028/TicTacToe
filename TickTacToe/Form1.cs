@@ -22,7 +22,7 @@ namespace TicTacToe
         List<Button> buttons;
         List<Label> labels;
 
-        MinMax minMax;
+        //MinMax minMax;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,16 +42,6 @@ namespace TicTacToe
                 button.Click += new System.EventHandler((sndr, evt) => 
                 {
                     button.Text = playerFirst ? "X" : "O";
-
-                    if (minMax == null)
-                    {
-                        label1.Text = "creating minmax";
-                        minMax = new MinMax(buttons.IndexOf(button));
-                    }
-                    else
-                    {
-                        minMax.PlayerMove(buttons.IndexOf(button));
-                    }
                 });
                 button.Click += new System.EventHandler(changeTurns);
             }
@@ -78,30 +68,9 @@ namespace TicTacToe
             }
             else
             {
-                if (minMax == null)
-                {
-                    label1.Text = "creating minmax";
-                    minMax = new MinMax();
-                }
-
                 label1.Text = "cpu turn";
-                int cpuMove;
-                GameStatus status;
-                (cpuMove, status) = minMax.BestMove();
-                if(cpuMove == -1)
-                {
-                    MessageBox.Show("u " + status.ToString());
-                }
-                else
-                {
-                    buttons[cpuMove].Text = playerFirst ? "O" : "X";
-                    changeTurns(sender, e);
 
-                    for (int i = 0; i < labels.Count(); i++)
-                    {
-                        labels[i].Text = minMax.CurrentNode.TileStates[i].ToString();
-                    }
-                }
+                //cpu stuff
             }
         }
     }

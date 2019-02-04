@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TickTacToe.Properties {
+namespace TicTacToe.Properties {
     using System;
     
     

@@ -70,8 +70,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MinMax.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="GameTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -111,6 +111,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TicTacToeLib\MiniMaxLib\MiniMaxLib\MiniMaxLib.csproj">
+      <Project>{b5f09a0a-6397-4e95-9524-1f259d977ff5}</Project>
+      <Name>MiniMaxLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
