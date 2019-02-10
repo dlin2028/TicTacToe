@@ -22,7 +22,7 @@ namespace TicTacToe
         List<Button> buttons;
         List<Label> labels;
 
-        //MinMax minMax;
+        GameTree gameTree;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -35,43 +35,46 @@ namespace TicTacToe
             playerFirst = !playerTurn;
 
 
-            foreach (var button in buttons)
+            for (int i = 0; i < buttons.Count; i++)
             {
+                var button = buttons[i];
+            
                 button.Text = "";
 
                 button.Click += new System.EventHandler((sndr, evt) => 
                 {
                     button.Text = playerFirst ? "X" : "O";
+                    gameTree.Move(buttons.IndexOf((Button)sndr));
+                    button.Enabled = false;
                 });
-                button.Click += new System.EventHandler(changeTurns);
+                button.Click += new System.EventHandler(cpuTurn);
             }
 
-            changeTurns(sender, e);
+            gameTree = new GameTree(playerTurn);
+            if(!playerTurn)
+            {
+                cpuTurn(sender, e);
+            }
         }
 
-        private void changeTurns(object sender, EventArgs e)
+        private void cpuTurn(object sender, EventArgs e)
         {
-            playerTurn = !playerTurn;
-
-
-            foreach (var button in buttons)
+            for (int i = 0; i < gameTree.currentStatus.Board.Length; i++)
             {
-                if (button.Text != "")
+                TileState tile = gameTree.currentStatus.Board[i];
+                if(tile == TileState.Cpu)
                 {
-                    button.Enabled = false;
+                    buttons[i].Text = playerFirst ? "O" : "X";
+                    buttons[i].Enabled = false;
+                }
+                else if(tile == TileState.User)
+                {
+                    buttons[i].Text = playerFirst ? "X" : "O";
+                    buttons[i].Enabled = false;
                 }
             }
 
-            if (playerTurn)
-            {
-                label1.Text = "your turn";
-            }
-            else
-            {
-                label1.Text = "cpu turn";
-
-                //cpu stuff
-            }
+            playerTurn = !playerTurn;
         }
     }
 }

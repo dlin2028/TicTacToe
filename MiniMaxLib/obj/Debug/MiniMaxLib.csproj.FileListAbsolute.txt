@@ -1,0 +1,6 @@
+C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\bin\Debug\MiniMaxLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\bin\Debug\MiniMaxLib.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.csprojAssemblyReference.cache
+C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.pdb

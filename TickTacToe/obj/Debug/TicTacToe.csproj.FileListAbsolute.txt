@@ -31,3 +31,6 @@ C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TickTacToe.pdb
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.dll
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.pdb
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.CopyComplete

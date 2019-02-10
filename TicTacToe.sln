@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TickTacToe\TicTacToe.csproj", "{A506F0FD-88DA-4711-8A9F-6A33AF81DECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMaxLib", "..\TicTacToeLib\MiniMaxLib\MiniMaxLib\MiniMaxLib.csproj", "{B5F09A0A-6397-4E95-9524-1F259D977FF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMaxLib", "MiniMaxLib\MiniMaxLib.csproj", "{153223F3-9829-469D-A8E5-8631392C9811}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A506F0FD-88DA-4711-8A9F-6A33AF81DECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A506F0FD-88DA-4711-8A9F-6A33AF81DECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A506F0FD-88DA-4711-8A9F-6A33AF81DECE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5F09A0A-6397-4E95-9524-1F259D977FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5F09A0A-6397-4E95-9524-1F259D977FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5F09A0A-6397-4E95-9524-1F259D977FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5F09A0A-6397-4E95-9524-1F259D977FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153223F3-9829-469D-A8E5-8631392C9811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153223F3-9829-469D-A8E5-8631392C9811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153223F3-9829-469D-A8E5-8631392C9811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153223F3-9829-469D-A8E5-8631392C9811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

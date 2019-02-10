@@ -70,7 +70,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameState.cs" />
+    <Compile Include="GameStatus.cs" />
     <Compile Include="GameTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,8 +113,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TicTacToeLib\MiniMaxLib\MiniMaxLib\MiniMaxLib.csproj">
-      <Project>{b5f09a0a-6397-4e95-9524-1f259d977ff5}</Project>
+    <ProjectReference Include="..\MiniMaxLib\MiniMaxLib.csproj">
+      <Project>{153223f3-9829-469d-a8e5-8631392c9811}</Project>
       <Name>MiniMaxLib</Name>
     </ProjectReference>
   </ItemGroup>
