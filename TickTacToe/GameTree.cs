@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MiniMaxLib;
 
 namespace TicTacToe
 {
     class GameTree : MiniMaxLib.GameTree
     {
-        public override GameStatus currentStatus { get; set}
+        public GameStatus CurrentStatus;
+        protected override IGameStatus currentStatus => CurrentStatus;
 
         public GameState State
         {
             get
             {
-                if (currentStatus.IsTerminal)
+                if (CurrentStatus.IsTerminal)
                 {
-                    if (currentStatus.Value == int.MaxValue)
+                    if (CurrentStatus.Value == int.MaxValue)
                     {
                         return GameState.Win;
                     }
-                    else if (currentStatus.Value == int.MinValue)
+                    else if (CurrentStatus.Value == int.MinValue)
                     {
                         return GameState.Lose;
                     }
@@ -36,29 +38,25 @@ namespace TicTacToe
 
         public GameTree(bool humanFirst = true)
         {
-            currentStatus = new GameStatus();
+            CurrentStatus = new GameStatus(humanFirst); 
 
-
-            if (!humanFirst)
+            if(!humanFirst)
             {
-                currentStatus = (GameStatus)BestMove(true);
+                CurrentStatus = (GameStatus)BestMove(true);
             }
         }
 
         public bool Move(int position)
         {
-            if (currentStatus.IsTerminal || currentStatus.Board[position] != 0)
+            if (CurrentStatus.IsTerminal || CurrentStatus.Board[position] != 0)
             {
                 return false;
             }
+            CurrentStatus = CurrentStatus.Move(position);
 
-            //human move
-            currentStatus = currentStatus.Move(position);
-
-            if (!currentStatus.IsTerminal)
+            if (!CurrentStatus.IsTerminal)
             {
-                //AI move if the game didn't finish
-                currentStatus = (GameStatus)BestMove(currentStatus.Player == TileState.User);
+                CurrentStatus = (GameStatus)BestMove(false);
             }
             return true;
         }

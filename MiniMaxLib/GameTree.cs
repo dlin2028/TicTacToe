@@ -23,12 +23,12 @@ namespace MiniMaxLib
             {
                 int value = Minimax(move, !isMax);
 
-                if (isMax && value > prime.value)
+                if (isMax && value <= prime.value)
                 {
                     prime.value = value;
                     prime.state = move;
                 }
-                else if (!isMax && value < prime.value)
+                else if (!isMax && value >= prime.value)
                 {
                     prime.value = value;
                     prime.state = move;

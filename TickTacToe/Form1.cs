@@ -59,9 +59,9 @@ namespace TicTacToe
 
         private void cpuTurn(object sender, EventArgs e)
         {
-            for (int i = 0; i < gameTree.currentStatus.Board.Length; i++)
+            for (int i = 0; i < gameTree.CurrentStatus.Board.Length; i++)
             {
-                TileState tile = gameTree.currentStatus.Board[i];
+                TileState tile = gameTree.CurrentStatus.Board[i];
                 if(tile == TileState.Cpu)
                 {
                     buttons[i].Text = playerFirst ? "O" : "X";

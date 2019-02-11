@@ -7,7 +7,7 @@ using MiniMaxLib;
 
 namespace TicTacToe
 {
-    public enum TileState { None = 2, Cpu = 1, User = -1 };
+    public enum TileState { None = 0, Cpu = 1, User = -1 };
     public enum GameState { Tie = 0, Win = 1, Lose = -1 }
 
     public class GameStatus : IGameStatus
@@ -41,12 +41,24 @@ namespace TicTacToe
             {
                 moves = GenerateMoves();
             }
-            return moves.FirstOrDefault(x => x.Board[move] == TileState.User);
+            GameStatus status = moves.FirstOrDefault(x => x.Board[move] == TileState.User);
+            if (status == null)
+            {
+                return this;
+            }
+            return status;
         }
 
-        public GameStatus()
+        public GameStatus(bool humanFirst)
         {
-            Player = TileState.Cpu;
+            if(humanFirst)
+            {
+                Player = TileState.Cpu;
+            }
+            else
+            {
+                Player = TileState.User;
+            }
             Board = new TileState[9];
             moves = null;
 
@@ -57,6 +69,7 @@ namespace TicTacToe
         {
             Board = (TileState[])prevBoard.Clone();
             Board[position] = move;
+            Player = move;
         }
         public GameStatus(TileState[] board, TileState move)
         {
@@ -65,11 +78,17 @@ namespace TicTacToe
             moves = null;
 
             Value = 0;
+            IsTerminal = false;
             CheckGameOver();
         }
 
         public IEnumerable<GameStatus> GenerateMoves()
         {
+            if(IsTerminal)
+            {
+                return new List<GameStatus>();
+            }
+
             //linq is cool
             return Board
                 //make a new member for every tile state that is None, null if it's not None
@@ -83,6 +102,7 @@ namespace TicTacToe
             if (!Board.Contains(TileState.None))
             {
                 Value = (int)GameState.Tie;
+                IsTerminal = true;
             }
 
             //0 1 2
@@ -90,16 +110,18 @@ namespace TicTacToe
             //6 7 8
 
             //horizontal wins
-            var temp = Board.Take(3);
             for (int i = 0; i < 3; i++)
             {
+                var temp = Board.Skip(i * 3).Take(3);
+
                 if (temp.All(x => x == temp.First()
                 && x != TileState.None))
                 {
+                    IsTerminal = true;
                     Value = (int)temp.First() * int.MaxValue;
                     return;
                 }
-                temp = temp.Take(3);
+                
             }
 
             //vertical wins
@@ -108,6 +130,7 @@ namespace TicTacToe
                 if (Board[i] == Board[i + 3] && Board[i] == Board[i + 6]
                     && Board[i] != TileState.None)
                 {
+                    IsTerminal = true;
                     Value = (int)Board[i] * int.MaxValue;
                     return;
                 }
@@ -118,6 +141,7 @@ namespace TicTacToe
             Board[2] == Board[4] && Board[4] == Board[6])
             && Board[4] != TileState.None)
             {
+                IsTerminal = true;
                 Value = (int)Board[4] * int.MaxValue;
                 return;
             }
