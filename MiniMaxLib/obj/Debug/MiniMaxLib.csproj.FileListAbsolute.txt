@@ -9,3 +9,4 @@ C:\Users\David\Documents\GitHub\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.pdb
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.csproj.CoreCompileInputs.cache
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.dll
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MiniMaxLib\obj\Debug\MiniMaxLib.csprojAssemblyReference.cache

@@ -7,8 +7,7 @@ using MiniMaxLib;
 
 namespace TicTacToe
 {
-    public enum TileState { None = 0, Cpu = 1, User = -1 };
-    public enum GameState { Tie = 0, Win = 1, Lose = -1 }
+    public enum TileState { None = 0, X = int.MaxValue, O = int.MinValue };
 
     public class GameStatus : IGameStatus
     {
@@ -37,11 +36,11 @@ namespace TicTacToe
 
         public GameStatus Move(int move)
         {
-            if(moves == null)
+            if (moves == null)
             {
                 moves = GenerateMoves();
             }
-            GameStatus status = moves.FirstOrDefault(x => x.Board[move] == TileState.User);
+            GameStatus status = moves.FirstOrDefault(x => x.Board[move] == Player);
             if (status == null)
             {
                 return this;
@@ -49,42 +48,36 @@ namespace TicTacToe
             return status;
         }
 
-        public GameStatus(bool humanFirst)
+        public GameStatus()
         {
-            if(humanFirst)
-            {
-                Player = TileState.Cpu;
-            }
-            else
-            {
-                Player = TileState.User;
-            }
+            Player = TileState.X;
             Board = new TileState[9];
             moves = null;
 
             Value = 0;
             IsTerminal = false;
         }
-        public GameStatus(TileState[] prevBoard, int position, TileState move)
+        public GameStatus(TileState[] prevBoard, int position, TileState player)
         {
             Board = (TileState[])prevBoard.Clone();
-            Board[position] = move;
-            Player = move;
-        }
-        public GameStatus(TileState[] board, TileState move)
-        {
-            Player = move;
-            Board = board;
+            Board[position] = player == TileState.X ? TileState.O : TileState.X;
+            Player = player;
             moves = null;
 
-            Value = 0;
-            IsTerminal = false;
             CheckGameOver();
         }
+        //public GameStatus(TileState[] board, TileState player)
+        //{
+        //    Player = player;
+        //    Board = board;
+        //    moves = null;
+
+        //    CheckGameOver();
+        //}
 
         public IEnumerable<GameStatus> GenerateMoves()
         {
-            if(IsTerminal)
+            if (IsTerminal)
             {
                 return new List<GameStatus>();
             }
@@ -92,7 +85,10 @@ namespace TicTacToe
             //linq is cool
             return Board
                 //make a new member for every tile state that is None, null if it's not None
-                .Select((tile, index) => tile != TileState.None ? null : new GameStatus(Board, index, Player == TileState.Cpu ? TileState.User : TileState.Cpu))
+                .Select((tile, index) =>
+                {
+                    return tile != TileState.None ? null : new GameStatus(Board, index, Player == TileState.X ? TileState.O : TileState.X);
+                })
                 //remove null members
                 .Where(child => child != null);
         }
@@ -101,7 +97,7 @@ namespace TicTacToe
         {
             if (!Board.Contains(TileState.None))
             {
-                Value = (int)GameState.Tie;
+                Value = (int)TileState.None;
                 IsTerminal = true;
             }
 
@@ -112,16 +108,16 @@ namespace TicTacToe
             //horizontal wins
             for (int i = 0; i < 3; i++)
             {
-                var temp = Board.Skip(i * 3).Take(3);
+                var row = Board.Skip(i * 3).Take(3);
 
-                if (temp.All(x => x == temp.First()
+                if (row.All(x => x == row.First()
                 && x != TileState.None))
                 {
                     IsTerminal = true;
-                    Value = (int)temp.First() * int.MaxValue;
+                    Value = (int)row.First();
                     return;
                 }
-                
+
             }
 
             //vertical wins
@@ -131,18 +127,19 @@ namespace TicTacToe
                     && Board[i] != TileState.None)
                 {
                     IsTerminal = true;
-                    Value = (int)Board[i] * int.MaxValue;
+                    Value = (int)Board[i];
                     return;
                 }
             }
 
             //diagonal wins
-            if ((Board[0] == Board[4] && Board[4] == Board[8] ||
-            Board[2] == Board[4] && Board[4] == Board[6])
-            && Board[4] != TileState.None)
+            if ((
+                (Board[0] == Board[4] && Board[4] == Board[8]) ||
+                (Board[2] == Board[4] && Board[4] == Board[6])
+            ) && Board[4] != TileState.None)
             {
                 IsTerminal = true;
-                Value = (int)Board[4] * int.MaxValue;
+                Value = (int)Board[4];
                 return;
             }
         }

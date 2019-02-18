@@ -17,18 +17,18 @@ namespace MiniMaxLib
                 return currentStatus;
             }
 
-            (int value, IGameStatus state) prime = (isMax ? int.MaxValue : int.MinValue, null);
+            (int value, IGameStatus state) prime = (isMax ? int.MinValue : int.MaxValue, null);
             
             foreach (IGameStatus move in currentStatus.Moves)
             {
                 int value = Minimax(move, !isMax);
 
-                if (isMax && value <= prime.value)
+                if (isMax && value > prime.value)
                 {
                     prime.value = value;
                     prime.state = move;
                 }
-                else if (!isMax && value >= prime.value)
+                else if (!isMax && value < prime.value)
                 {
                     prime.value = value;
                     prime.state = move;

@@ -7,6 +7,13 @@ using MiniMaxLib;
 
 namespace TicTacToe
 {
+    enum GameState
+    {
+        Xwin,
+        Owin,
+        Tie
+    };
+
     class GameTree : MiniMaxLib.GameTree
     {
         public GameStatus CurrentStatus;
@@ -20,11 +27,11 @@ namespace TicTacToe
                 {
                     if (CurrentStatus.Value == int.MaxValue)
                     {
-                        return GameState.Win;
+                        return GameState.Xwin;
                     }
                     else if (CurrentStatus.Value == int.MinValue)
                     {
-                        return GameState.Lose;
+                        return GameState.Owin;
                     }
                     else
                     {
@@ -38,7 +45,7 @@ namespace TicTacToe
 
         public GameTree(bool humanFirst = true)
         {
-            CurrentStatus = new GameStatus(humanFirst); 
+            CurrentStatus = new GameStatus(); 
 
             if(!humanFirst)
             {
@@ -56,7 +63,7 @@ namespace TicTacToe
 
             if (!CurrentStatus.IsTerminal)
             {
-                CurrentStatus = (GameStatus)BestMove(false);
+                CurrentStatus = (GameStatus)BestMove(CurrentStatus.Player == TileState.X);
             }
             return true;
         }

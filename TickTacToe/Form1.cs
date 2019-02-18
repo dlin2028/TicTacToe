@@ -17,8 +17,6 @@ namespace TicTacToe
             InitializeComponent();
         }
 
-        bool playerFirst;
-        bool playerTurn;
         List<Button> buttons;
         List<Label> labels;
 
@@ -31,8 +29,7 @@ namespace TicTacToe
             labels = new List<Label> { label2, label3, label4, label5, label6, label7, label8, label9, label10 };
 
             Random rng = new Random();
-            playerTurn = 1 == rng.Next(2);
-            playerFirst = !playerTurn;
+            bool humanFirst = 1 == rng.Next(2);
 
 
             for (int i = 0; i < buttons.Count; i++)
@@ -43,15 +40,20 @@ namespace TicTacToe
 
                 button.Click += new System.EventHandler((sndr, evt) => 
                 {
-                    button.Text = playerFirst ? "X" : "O";
+                    if(gameTree.CurrentStatus.IsTerminal)
+                    {
+                        return;
+                    }
+
+                    button.Text = humanFirst ? "X" : "O";
                     gameTree.Move(buttons.IndexOf((Button)sndr));
                     button.Enabled = false;
                 });
                 button.Click += new System.EventHandler(cpuTurn);
             }
 
-            gameTree = new GameTree(playerTurn);
-            if(!playerTurn)
+            gameTree = new GameTree(humanFirst);
+            if(!humanFirst)
             {
                 cpuTurn(sender, e);
             }
@@ -62,19 +64,22 @@ namespace TicTacToe
             for (int i = 0; i < gameTree.CurrentStatus.Board.Length; i++)
             {
                 TileState tile = gameTree.CurrentStatus.Board[i];
-                if(tile == TileState.Cpu)
+                if(tile == TileState.X)
                 {
-                    buttons[i].Text = playerFirst ? "O" : "X";
+                    buttons[i].Text = "X";
                     buttons[i].Enabled = false;
                 }
-                else if(tile == TileState.User)
+                else if(tile == TileState.O)
                 {
-                    buttons[i].Text = playerFirst ? "X" : "O";
+                    buttons[i].Text = "O";
                     buttons[i].Enabled = false;
+                }
+                else
+                {
+                    //enable button, clear text
+                    ;
                 }
             }
-
-            playerTurn = !playerTurn;
         }
     }
 }
