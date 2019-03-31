@@ -20,7 +20,7 @@ namespace TicTacToe
         List<Button> buttons;
         List<Label> labels;
 
-        GameTree gameTree;
+        MCGameTree gameTree;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -52,7 +52,7 @@ namespace TicTacToe
                 button.Click += new System.EventHandler(cpuTurn);
             }
 
-            gameTree = new GameTree(humanFirst);
+            gameTree = new MCGameTree(humanFirst);
             if(!humanFirst)
             {
                 cpuTurn(sender, e);

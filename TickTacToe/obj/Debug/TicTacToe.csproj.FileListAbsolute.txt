@@ -34,3 +34,18 @@ C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TickTacToe.pdb
 C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.dll
 C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\bin\Debug\MiniMaxLib.pdb
 C:\Users\David\Documents\GitHub\TicTacToe\TickTacToe\obj\Debug\TicTacToe.csproj.CopyComplete
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Data.Common.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Diagnostics.StackTrace.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Diagnostics.Tracing.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Globalization.Extensions.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.IO.Compression.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Net.Http.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Net.Sockets.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Runtime.Serialization.Primitives.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Security.Cryptography.Algorithms.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Security.SecureString.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Threading.Overlapped.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\System.Xml.XPath.XDocument.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\MonteCarloLib.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\bin\Debug\MonteCarloLib.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\TickTacToe\obj\Debug\TickTacToe.exe.config

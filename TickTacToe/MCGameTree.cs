@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MiniMaxLib;
+using MonteCarloLib;
 
 namespace TicTacToe
 {
-    enum GameState
-    {
-        Xwin = 1,
-        Owin = -1,
-        Tie = 0
-    };
+//    enum GameState
+//    {
+//        Xwin,
+//        Owin,
+//        Tie
+//    };
 
-    class GameTree : MiniMaxLib.GameTree
+    class MCGameTree : MonteCarloLib.GameTree
     {
-        public GameStatus CurrentStatus;
-        protected override IGameStatus currentStatus => CurrentStatus;
+        public MCGameStatus CurrentStatus;
+        protected override IGameStatus Current => CurrentStatus;
 
         public GameState State
         {
@@ -25,11 +25,11 @@ namespace TicTacToe
             {
                 if (CurrentStatus.IsTerminal)
                 {
-                    if (CurrentStatus.Value == int.MaxValue)
+                    if (CurrentStatus.Value == 1)
                     {
                         return GameState.Xwin;
                     }
-                    else if (CurrentStatus.Value == int.MinValue)
+                    else if (CurrentStatus.Value == -1)
                     {
                         return GameState.Owin;
                     }
@@ -43,13 +43,13 @@ namespace TicTacToe
             }
         }
 
-        public GameTree(bool humanFirst = true)
+        public MCGameTree(bool humanFirst = true)
         {
-            CurrentStatus = new GameStatus(); 
+            CurrentStatus = new MCGameStatus(); 
 
             if(!humanFirst)
             {
-                CurrentStatus = (GameStatus)BestMove(true);
+                CurrentStatus = (MCGameStatus)BestMove(true, 1000, 10);
             }
         }
 
@@ -63,7 +63,7 @@ namespace TicTacToe
 
             if (!CurrentStatus.IsTerminal)
             {
-                CurrentStatus = (GameStatus)BestMove(CurrentStatus.Player == TileState.X);
+                CurrentStatus = (MCGameStatus)BestMove(CurrentStatus.Player == TileState.X, 1000, 10);
             }
             return true;
         }

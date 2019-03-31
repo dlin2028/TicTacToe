@@ -70,7 +70,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MCGameStatus.cs" />
     <Compile Include="GameStatus.cs" />
+    <Compile Include="MCGameTree.cs" />
     <Compile Include="GameTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +118,10 @@
     <ProjectReference Include="..\MiniMaxLib\MiniMaxLib.csproj">
       <Project>{153223f3-9829-469d-a8e5-8631392c9811}</Project>
       <Name>MiniMaxLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonteCarloLib\MonteCarloLib.csproj">
+      <Project>{fce1fb87-ebdc-4deb-8753-08d4113bc913}</Project>
+      <Name>MonteCarloLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

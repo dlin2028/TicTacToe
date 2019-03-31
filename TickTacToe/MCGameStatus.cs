@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MiniMaxLib;
+using MonteCarloLib;
 
 namespace TicTacToe
 {
-    public enum TileState { None = 0, X = 1, O = -1 };
-
-    public class GameStatus : IGameStatus
+    [DebuggerDisplay("Wins: {Wins}, Sims: {Simulations}, Vis: {Visited}")]
+    public class MCGameStatus : MonteCarloLib.IGameStatus
     {
-        //saving stuff
-        private IEnumerable<GameStatus> moves;
+        private List<MCGameStatus> moves;
 
         //interface members
-        public int Value { get; set; }
-        public bool IsTerminal { get; set; }
-
         public IEnumerable<IGameStatus> Moves
         {
             get
@@ -28,19 +24,30 @@ namespace TicTacToe
                 }
                 return moves;
             }
+            set
+            {
+                moves = (List<MCGameStatus>)value;
+            }
         }
+
+        public double Wins { get; set; }
+        public double Simulations { get; set; }
+        public bool Visited { get; set; }
+        public int Value { get; set; }
+        public bool IsTerminal { get; set; }
 
         //class members
         public TileState Player;
         public TileState[] Board;
 
-        public GameStatus Move(int move)
+        
+        public MCGameStatus Move(int move)
         {
             if (moves == null)
             {
                 moves = GenerateMoves();
             }
-            GameStatus status = moves.FirstOrDefault(x => x.Board[move] == Player);
+            MCGameStatus status = moves.FirstOrDefault(x => x.Board[move] == Player);
             if (status == null)
             {
                 return this;
@@ -48,7 +55,7 @@ namespace TicTacToe
             return status;
         }
 
-        public GameStatus()
+        public MCGameStatus()
         {
             Player = TileState.X;
             Board = new TileState[9];
@@ -57,12 +64,15 @@ namespace TicTacToe
             Value = 0;
             IsTerminal = false;
         }
-        public GameStatus(TileState[] prevBoard, int position, TileState player)
+        public MCGameStatus(TileState[] prevBoard, int position, TileState player)
         {
             Board = (TileState[])prevBoard.Clone();
             Board[position] = player == TileState.X ? TileState.O : TileState.X;
             Player = player;
             moves = null;
+
+            Value = 0;
+            IsTerminal = false;
 
             CheckGameOver();
         }
@@ -75,11 +85,11 @@ namespace TicTacToe
         //    CheckGameOver();
         //}
 
-        public IEnumerable<GameStatus> GenerateMoves()
+        public List<MCGameStatus> GenerateMoves()
         {
             if (IsTerminal)
             {
-                return new List<GameStatus>();
+                return new List<MCGameStatus>();
             }
 
             //linq is cool
@@ -87,10 +97,10 @@ namespace TicTacToe
                 //make a new member for every tile state that is None, null if it's not None
                 .Select((tile, index) =>
                 {
-                    return tile != TileState.None ? null : new GameStatus(Board, index, Player == TileState.X ? TileState.O : TileState.X);
+                    return tile != TileState.None ? null : new MCGameStatus(Board, index, Player == TileState.X ? TileState.O : TileState.X);
                 })
                 //remove null members
-                .Where(child => child != null);
+                .Where(child => child != null).ToList();
         }
 
         public void CheckGameOver()

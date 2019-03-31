@@ -1,0 +1,9 @@
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\bin\Debug\netstandard2.0\MonteCarloLib.deps.json
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\bin\Debug\netstandard2.0\MonteCarloLib.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\bin\Debug\netstandard2.0\MonteCarloLib.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.csprojAssemblyReference.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.csproj.CoreCompileInputs.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.AssemblyInfoInputs.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.AssemblyInfo.cs
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.pdb
