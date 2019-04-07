@@ -24,7 +24,7 @@ namespace MonteCarloLib
         /// <param name="isMax">determines if current turn is maximizer or minimizer</param>
         /// <param name="playouts">the number of playouts for Monte Carlo to perform</param>
         /// <returns>The optimal game Status</returns>
-        protected virtual IGameStatus BestMove(bool isMax, int playouts, int depth)
+        protected virtual IGameStatus BestMove(bool isMax, int playouts)
         {
             if (Current.IsTerminal)
             {
@@ -36,7 +36,7 @@ namespace MonteCarloLib
                 MonteCarlo(Current, isMax);
             }
 
-            return Current.Moves.OrderByDescending(x => x.Value).First();
+            return Current.Moves.OrderByDescending(x => x.Simulations).First();
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace MonteCarloLib
 
         private double UCT(IGameStatus child, double parentSims, double rate = 1.41421356237)
         {
-            return child.Wins / child.Simulations + rate * Math.Sqrt(Math.Log(parentSims, Math.E) / child.Simulations);
+            return (child.Simulations - child.Wins) / child.Simulations + rate * Math.Sqrt(Math.Log(parentSims) / child.Simulations);
         }
 
         /// <summary>

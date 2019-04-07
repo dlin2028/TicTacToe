@@ -1,0 +1,56 @@
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.csprojAssemblyReference.cache
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.exe.config
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\AlgoTesting.exe.config
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\AlgoTesting.exe
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\AlgoTesting.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Data.Common.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.IO.Compression.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Net.Http.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Net.Sockets.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Security.SecureString.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\MiniMaxLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\MonteCarloLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\TickTacToe.exe
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\MiniMaxLib.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\MonteCarloLib.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\TickTacToe.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\bin\Debug\TickTacToe.exe.config
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.exe
+C:\Users\David\Documents\GitHub\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\AlgoTesting.exe.config
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\AlgoTesting.exe
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\AlgoTesting.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Data.Common.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Diagnostics.StackTrace.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Diagnostics.Tracing.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Globalization.Extensions.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.IO.Compression.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Net.Http.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Net.Sockets.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Runtime.Serialization.Primitives.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Security.Cryptography.Algorithms.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Security.SecureString.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Threading.Overlapped.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\System.Xml.XPath.XDocument.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\MiniMaxLib.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\MonteCarloLib.dll
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\TickTacToe.exe
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\MiniMaxLib.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\MonteCarloLib.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\TickTacToe.pdb
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\bin\Debug\TickTacToe.exe.config
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.csprojAssemblyReference.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.exe.config
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.csproj.CoreCompileInputs.cache
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.csproj.CopyComplete
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.exe
+\\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\AlgoTesting\obj\Debug\AlgoTesting.pdb

@@ -14,7 +14,7 @@ namespace TicTacToe
 //        Tie
 //    };
 
-    class MCGameTree : MonteCarloLib.GameTree
+    public class MCGameTree : MonteCarloLib.GameTree
     {
         public MCGameStatus CurrentStatus;
         protected override IGameStatus Current => CurrentStatus;
@@ -49,23 +49,32 @@ namespace TicTacToe
 
             if(!humanFirst)
             {
-                CurrentStatus = (MCGameStatus)BestMove(true, 1000, 10);
+                CurrentStatus = (MCGameStatus)BestMove(true, 1000);
             }
         }
 
-        public bool Move(int position)
+        public int Move(int position)
         {
             if (CurrentStatus.IsTerminal || CurrentStatus.Board[position] != 0)
             {
-                return false;
+                return -1;
             }
             CurrentStatus = CurrentStatus.Move(position);
 
+            TileState[] lastBoard = (TileState[])CurrentStatus.Board.Clone();
+
             if (!CurrentStatus.IsTerminal)
             {
-                CurrentStatus = (MCGameStatus)BestMove(CurrentStatus.Player == TileState.X, 1000, 10);
+                CurrentStatus = (MCGameStatus)BestMove(CurrentStatus.Player == TileState.X, 1000);
             }
-            return true;
+
+            for (int i = 0; i < lastBoard.Length; i++)
+            {
+                if (lastBoard[i] != CurrentStatus.Board[i])
+                    return i;
+            }
+            //you suck at progromming
+            return -1;
         }
     }
 }

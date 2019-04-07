@@ -7,14 +7,14 @@ using MiniMaxLib;
 
 namespace TicTacToe
 {
-    enum GameState
+    public enum GameState
     {
         Xwin = 1,
         Owin = -1,
         Tie = 0
     };
 
-    class GameTree : MiniMaxLib.GameTree
+    public class GameTree : MiniMaxLib.GameTree
     {
         public GameStatus CurrentStatus;
         protected override IGameStatus currentStatus => CurrentStatus;
@@ -53,19 +53,28 @@ namespace TicTacToe
             }
         }
 
-        public bool Move(int position)
+        public int Move(int position)
         {
             if (CurrentStatus.IsTerminal || CurrentStatus.Board[position] != 0)
             {
-                return false;
+                return -1;
             }
             CurrentStatus = CurrentStatus.Move(position);
+
+            TileState[] lastBoard = CurrentStatus.Board;
 
             if (!CurrentStatus.IsTerminal)
             {
                 CurrentStatus = (GameStatus)BestMove(CurrentStatus.Player == TileState.X);
             }
-            return true;
+
+            for (int i = 0; i < lastBoard.Length; i++)
+            {
+                if (lastBoard[i] != CurrentStatus.Board[i])
+                    return i;
+            }
+            //you suck at progromming
+            return -1;
         }
     }
 }

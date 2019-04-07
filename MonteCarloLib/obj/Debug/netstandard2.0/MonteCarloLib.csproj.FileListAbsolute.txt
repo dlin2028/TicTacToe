@@ -7,3 +7,12 @@
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.AssemblyInfo.cs
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.dll
 \\GMRDC1\Folder Redirection\david.lin\Documents\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\bin\Debug\netstandard2.0\MonteCarloLib.deps.json
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\bin\Debug\netstandard2.0\MonteCarloLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\bin\Debug\netstandard2.0\MonteCarloLib.pdb
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.csprojAssemblyReference.cache
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.AssemblyInfoInputs.cache
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.AssemblyInfo.cs
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.dll
+C:\Users\David\Documents\GitHub\TicTacToe\MonteCarloLib\obj\Debug\netstandard2.0\MonteCarloLib.pdb
