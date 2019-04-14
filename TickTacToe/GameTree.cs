@@ -25,11 +25,11 @@ namespace TicTacToe
             {
                 if (CurrentStatus.IsTerminal)
                 {
-                    if (CurrentStatus.Value == int.MaxValue)
+                    if (CurrentStatus.Value == 1)
                     {
                         return GameState.Xwin;
                     }
-                    else if (CurrentStatus.Value == int.MinValue)
+                    else if (CurrentStatus.Value == -1)
                     {
                         return GameState.Owin;
                     }

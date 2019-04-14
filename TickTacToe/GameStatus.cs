@@ -87,7 +87,7 @@ namespace TicTacToe
                 //make a new member for every tile state that is None, null if it's not None
                 .Select((tile, index) =>
                 {
-                    return tile != TileState.None ? null : new GameStatus(Board, index, Player == TileState.X ? TileState.O : TileState.X);
+                    return (tile != TileState.None) ? null : new GameStatus(Board, index, Player == TileState.X ? TileState.O : TileState.X);
                 })
                 //remove null members
                 .Where(child => child != null);
@@ -95,6 +95,8 @@ namespace TicTacToe
 
         public void CheckGameOver()
         {
+            //Board = new TileState[]{ TileState.O, TileState.O, TileState.O, TileState.X, TileState.None, TileState.X, TileState.None, TileState.X, TileState.None};
+                
             if (!Board.Contains(TileState.None))
             {
                 Value = (int)TileState.None;

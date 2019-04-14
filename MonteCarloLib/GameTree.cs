@@ -137,7 +137,7 @@ namespace MonteCarloLib
         /// <param name="terminalValue">the terminal value we reached in the simulation phase</param>
         private void UpdateStatus(IGameStatus status, bool isMax, int terminalValue)
         {
-            if ((isMax && terminalValue == 1) || (!isMax && terminalValue == 1)) //win game for current player
+            if ((isMax && terminalValue == 1) || (!isMax && terminalValue == -1)) //win game for current player
             {
                 status.Wins++;
             }

@@ -45,6 +45,16 @@ namespace AlgoTesting
                         mcMove = monteCarlo.Move(miniMove);
                     }
                 }
+                if (miniFirst)
+                {
+                     mcMove = monteCarlo.Move(miniMove);
+                    miniMove = minimax.Move(mcMove);
+                }
+                else
+                {
+                    miniMove = minimax.Move(mcMove);
+                    mcMove = monteCarlo.Move(miniMove);
+                }
 
                 Console.WriteLine($"Minimax\t\t{miniFirst}\t{minimax.State}");
                 Console.WriteLine($"MonteCarlo\t{!miniFirst}\t{monteCarlo.State}\n");
